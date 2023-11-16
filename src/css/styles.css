@@ -8,3 +8,22 @@ body {
     -o-background-size: cover;
     min-height: 100vh;
   }
+
+.nav-link:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 0.2rem;
+    text-decoration-color: #6C757D;
+    font-weight: bold;
+    color: black;
+}
+
+.home-title {
+  font-family: Great Vibes;
+  font-size: 8rem;
+  width: fit-content;
+}
+
+.home-text {
+  font-family: Great Vibes;
+  font-size: 3rem;
+}
