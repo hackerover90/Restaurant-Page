@@ -1,5 +1,5 @@
 # Restaurant-Page
 
-Create a simple restaurant page using webpack
+Create a simple restaurant page using webpack and bootstrap
 
   
