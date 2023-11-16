@@ -1,8 +1,9 @@
-import './css/styles.css'
+import '../css/styles.css'
 //import * as bootstrap from 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import homePage from './home'
 import menuPage from './menu'
+import contactPage from './contact';
 
 function alertt() {
     console.log('works!')
@@ -33,17 +34,17 @@ function createPageFormat() {
         if (i==0) {
             link.setAttribute('id', 'home')
             link.setAttribute('href', '#')
-            link.classList.add('p-0', 'mx-5', 'my-2', 'text-dark')
+            link.classList.add('link', 'p-0', 'mx-5', 'my-2', 'text-dark')
             link.innerHTML = 'Home'
         } else if (i==1) {
             link.setAttribute('id', 'menu')
             link.setAttribute('href', '#')
-            link.classList.add('p-0', 'mx-5', 'my-2', 'text-dark')
+            link.classList.add('link', 'p-0', 'mx-5', 'my-2', 'text-dark')
             link.innerHTML = 'Menu'
         } else {
             link.setAttribute('id', 'contact')
             link.setAttribute('href', '#')
-            link.classList.add('p-0', 'mx-5', 'my-2', 'text-dark')
+            link.classList.add('link', 'p-0', 'mx-5', 'my-2', 'text-dark')
             link.innerHTML = 'Contact'
         }
         //link.setAttribute('onclick', )
@@ -58,20 +59,20 @@ function createPageFormat() {
 createPageFormat()
 homePage()
 
-document.querySelector('#home').addEventListener('click', () => {
-    let pageBody = document.getElementById('pageBody')
-   while (pageBody.firstChild) {
-        pageBody.removeChild(pageBody.lastChild)
-    }
-    
-    homePage()
-})
-
-document.querySelector('#menu').addEventListener('click', () => {
-    let pageBody = document.getElementById('pageBody')
-   while (pageBody.firstChild) {
-        pageBody.removeChild(pageBody.lastChild)
-    }
-    
-    menuPage()
+document.querySelectorAll('.link').forEach((link) => {
+    link.addEventListener('click', () => {
+        let pageBody = document.getElementById('pageBody')
+        pageBody.className = ''
+        while (pageBody.firstChild) {
+                pageBody.removeChild(pageBody.lastChild)
+        }
+        
+        if (link.id == 'home') {
+            homePage()
+        } else if (link.id == 'menu') {
+            menuPage()
+        } else if (link.id == 'contact') {
+            contactPage()
+        }
+    })
 })

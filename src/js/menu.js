@@ -1,18 +1,18 @@
-import Plain from './images/plain-croissant.jpg'
-import Chocolate from './images/chocolate-croissant.jpg'
-import Strawberry from './images/strawberry-croissant.jpg'
-import Sugar from './images/sugar-croissant.jpg'
+import Plain from '../images/plain-croissant.jpg'
+import Chocolate from '../images/chocolate-croissant.jpg'
+import Strawberry from '../images/strawberry-croissant.jpg'
+import Sugar from '../images/sugar-croissant.jpg'
 
 function menuPage() {
 
 
     let menuPageBody = document.querySelector('#pageBody')
-    menuPageBody.classList.remove('justify-content-center')
-    menuPageBody.classList.add('d-flex', 'flex-column', 'justify-content-start')
+    //menuPageBody.classList.remove('justify-content-center')
+    menuPageBody.classList.add('d-flex', 'flex-column', 'justify-content-start', 'pageBody', 'flex-fill')
     
     let menuTitle = document.createElement('div')
     menuTitle.innerHTML = 'Menu'
-    menuTitle.classList.add('home-title', 'text-center', 'border-bottom', 'border-secondary', 'border-3')
+    menuTitle.classList.add('home-title', 'text-center', 'border-bottom', 'border-secondary', 'border-3', 'py-0', 'my-0')
     let menuContainer = document.createElement('div')
     menuContainer.classList.add('container', 'my-4', 'd-flex', 'flex-wrap', 'justify-content-center', 'gap-5')
     for (let i = 0; i < 4; i++) {

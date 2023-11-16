@@ -1,8 +1,6 @@
-
-
 function homePage() {
     let pageBody = document.querySelector('#pageBody')
-    pageBody.classList.add('d-flex', 'flex-column', 'justify-content-center', 'align-items-center')
+    pageBody.classList.add('d-flex', 'flex-column', 'justify-content-center', 'align-items-center', 'pageBody', 'flex-fill')
     
     let homeTitle = document.createElement('div')
     homeTitle.innerHTML = 'Crazy Croissants'
