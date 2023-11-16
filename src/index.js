@@ -2,6 +2,7 @@ import './css/styles.css'
 //import * as bootstrap from 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import homePage from './home'
+import menuPage from './menu'
 
 function alertt() {
     console.log('works!')
@@ -17,7 +18,7 @@ function createPageFormat() {
     content.classList.add('d-flex', 'flex-column', 'justify-content-between', 'min-vh-100', 'min-vw-100', 'vw-100', 'vh-100')
     header.classList.add('d-flex', 'justify-content-center', 'bg-light', 'opacity-75', 'border-bottom', 'border-secondary', 'border-3')
     header.setAttribute('id', 'header')
-    pageBody.classList.add('flex-fill', 'bg-light', 'opacity-50')
+    pageBody.classList.add('pageBody', 'flex-fill')
     pageBody.setAttribute('id', 'pageBody')
     navBar.classList.add('nav')
     footer.classList.add('d-flex', 'justify-content-center', 'bg-light', 'opacity-75', 'py-2', 'border-top', 'border-secondary', 'border-3')
@@ -64,4 +65,13 @@ document.querySelector('#home').addEventListener('click', () => {
     }
     
     homePage()
+})
+
+document.querySelector('#menu').addEventListener('click', () => {
+    let pageBody = document.getElementById('pageBody')
+   while (pageBody.firstChild) {
+        pageBody.removeChild(pageBody.lastChild)
+    }
+    
+    menuPage()
 })

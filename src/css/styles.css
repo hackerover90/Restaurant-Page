@@ -1,7 +1,7 @@
 
 
 body {
-    background: url("../croissant-small.jpg") no-repeat center center fixed;
+    background: url("../images/croissant-small.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -26,4 +26,10 @@ body {
 .home-text {
   font-family: Great Vibes;
   font-size: 3rem;
+}
+
+.card-bodies { background: none;}
+
+.pageBody {
+  background: rgba(251, 251, 251, 0.5);
 }
