@@ -7,8 +7,7 @@ function menuPage() {
 
 
     let menuPageBody = document.querySelector('#pageBody')
-    //menuPageBody.classList.remove('justify-content-center')
-    menuPageBody.classList.add('d-flex', 'flex-column', 'justify-content-start', 'pageBody', 'flex-fill')
+    menuPageBody.classList.add('d-flex', 'flex-column', 'justify-content-start', 'align-items-center', 'pageBody', 'flex-fill')
     
     let menuTitle = document.createElement('div')
     menuTitle.innerHTML = 'Menu'
